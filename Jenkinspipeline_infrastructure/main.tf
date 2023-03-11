@@ -18,7 +18,7 @@ resource "aws_instance" "california_server" {
   ami           = "ami-060d3509162bcc386"
   instance_type = "t2.micro"
   key_name = "devops"
-  user_data = file("cicd_docker.sh")
+  user_data = file("server.sh")
   security_groups = ["default"]
   
 
