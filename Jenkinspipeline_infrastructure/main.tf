@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "us-east-1"
+  region  = "us-west-1"
 }
 
 resource "aws_instance" "california_server" {
@@ -29,6 +29,6 @@ resource "aws_instance" "california_server" {
   
 resource "aws_security_group" "default" {
 	tags = {
-	type = "terraform-test-security-group"
+	type = "terraform-security-group"
 }
 }
