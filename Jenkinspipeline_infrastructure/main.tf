@@ -23,7 +23,7 @@ resource "aws_instance" "california_server" {
   
 
   tags = {
-  Name = "DockerTerra"
+  Name = "DockerTerraform"
   }
   }
   
