@@ -4,8 +4,8 @@ sudo su --
 hostname tomcat-server
 amazon-linux-extras install -y java-openjdk11
 cd /opt/
-wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.49/bin/apache-tomcat-8.5.49.tar.gz
-tar -xvzf apache-tomcat-8.5.49.tar.gz
-mv apache-tomcat-8.5.49 tomcat
+wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz
+tar -xvzf apache-tomcat-10.1.7.tar.gz 
+mv apache-tomcat-10.1.7 tomcat
 cd /opt/tomcat/bin/
 ./startup.sh
