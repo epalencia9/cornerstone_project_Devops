@@ -11,13 +11,13 @@ resource "aws_instance" "docker_server" {
 }
 
 resource "aws_instance" "tomcatt_server" {
-  ami             = "ami-0cff7528ff583bf9a"
+  ami             = "ami-060d3509162bcc386"
   instance_type   = "t2.micro"
   key_name = "devops"
   security_groups = ["terraform"]
   user_data = file("tomcat.sh")
 
   tags = {
-    Name = "tomcatt_server-terraform"
+    Name = "tomcat_server-terraform"
   }
 }
