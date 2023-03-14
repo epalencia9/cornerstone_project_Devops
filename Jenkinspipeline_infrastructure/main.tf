@@ -2,7 +2,7 @@ resource "aws_instance" "docker_server" {
   ami             = "ami-060d3509162bcc386"
   instance_type   = "t2.micro"
   key_name = "devops"
-  security_groups = ["terraform"]
+  security_groups = ["default"]
   user_data = file("docker.sh")
 
   tags = {
@@ -14,7 +14,7 @@ resource "aws_instance" "tomcatt_server" {
   ami             = "ami-060d3509162bcc386"
   instance_type   = "t2.micro"
   key_name = "devops"
-  security_groups = ["terraform"]
+  security_groups = ["default"]
   user_data = file("tomcat.sh")
 
   tags = {
