@@ -15,7 +15,7 @@ resource "aws_instance" "tomcatt_server" {
   instance_type   = "t2.micro"
   key_name = "devops"
   security_groups = ["terraform"]
-  user_data = file("tomcatt.sh")
+  user_data = file("tomcat.sh")
 
   tags = {
     Name = "tomcatt_server-terraform"
