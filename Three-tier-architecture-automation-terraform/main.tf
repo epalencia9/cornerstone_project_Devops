@@ -14,7 +14,7 @@ resource "aws_internet_gateway" "gateway" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    name = "terragateway"
+    name = "terraform-gateway"
   }
   
   
@@ -26,7 +26,7 @@ resource "aws_subnet" "public-subnet" {
   
 
   tags = {
-    "name" = "terrasubnetpublic"
+    "name" = "terraformsubnetpublic"
   }
   
 }
@@ -57,7 +57,7 @@ resource "aws_subnet" "private-subnet" {
   
 
   tags = {
-    "name" = "terrasubnetprivate"
+    "name" = "terraformsubnetprivate"
   }
   
 }
