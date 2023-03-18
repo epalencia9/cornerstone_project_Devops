@@ -26,7 +26,7 @@ resource "aws_subnet" "public-subnet" {
   
 
   tags = {
-    "name" = "terraformsubnetpublic"
+    "name" = "Terraform-subnetpublic"
   }
   
 }
@@ -40,7 +40,7 @@ resource "aws_route_table" "route-table" {
   }
 
   tags = {
-    Name = "terraformroutetable"
+    Name = "Terraform-routetable"
   }
 }
 
@@ -57,7 +57,7 @@ resource "aws_subnet" "private-subnet" {
   
 
   tags = {
-    "name" = "terraformsubnetprivate"
+    "name" = "Terraform-subnetprivate"
   }
   
 }
@@ -112,20 +112,20 @@ egress {
 }
 
 tags = {
-  Name = "webserver_security"
+  Name = "webserver-security"
   }
 }
 
 #EC2 instances for webservers.
 
 resource "aws_instance" "jenkins_server" {
-  ami             = "ami-0cff7528ff583bf9a"
+  ami             = "ami-0df24e148fdb9f1d"
   instance_type   = "t2.micro"
-  key_name = "terraform"
+  key_name = "Natalierose"
   subnet_id = aws_subnet.public-subnet.id
 
   tags = {
-    Name = "Jenkins_server-terraform"
+    Name = "Jenkins-sver-terraform"
   }
 }
 
